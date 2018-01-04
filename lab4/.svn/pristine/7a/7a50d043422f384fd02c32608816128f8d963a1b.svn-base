@@ -1,0 +1,48 @@
+#include <minix/syslib.h>
+#include <minix/drivers.h>
+#include <minix/com.h>
+#include <minix/sysutil.h>
+#include "mouse.h"
+#include "i8042.h"
+#include "keyboard.h"
+
+static int mouse_hook = 2;
+
+int mouse_subscribe_int(void){
+
+	//Save original hook ID for the irq_set
+	int originalHook=mouse_hook;
+
+	//Subscribe mouse interrupts
+	if(sys_irqsetpolicy(MOUSE_IRQ, IRQ_REENABLE|IRQ_EXCLUSIVE, &mouse_hook) != OK || sys_irqenable(&mouse_hook) != OK)
+		return -1;
+
+	return originalHook;
+}
+
+int mouse_unsubscribe_int(){
+
+	//Unsubscribe mouse interrupts
+	if(sys_irqdisable(&mouse_hook) != OK || sys_irqrmpolicy(&mouse_hook) != OK)
+		return 1;
+
+	return 0;
+}
+
+int mouse_enable_stream_mode(){
+
+	if(kbc_write(KBC_CMD_REG, BYTE_TO_MOUSE)){
+		printf("Error in mouse_enable_stream_mode()-BYTE TO MOUSE\n");
+		return 1;
+	}
+
+	if(kbc_write(KBC_CMD_RED, ENABLE_DATA_REPORTING)){
+		printf("Error in mouse_enable_stream_mode()-ENABLE DATA REPORT\n");
+		return 1;
+	}
+
+	return 0;
+}
+
+
+

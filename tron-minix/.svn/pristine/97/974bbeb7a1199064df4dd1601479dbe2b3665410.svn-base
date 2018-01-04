@@ -1,0 +1,244 @@
+\hypertarget{group__Bike}{}\section{Bike}
+\label{group__Bike}\index{Bike@{Bike}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structBike}{Bike}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structBike}{Bike} \hyperlink{group__Bike_ga85f4cbf9698a8ed38ad74f4e2d71341e}{Bike}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__Bike_ga9d5bd9dd5a4b9347fa04fb0a47e7b138}{get\+InitialX} (struct \hyperlink{structBike}{Bike} bike)
+\begin{DoxyCompactList}\small\item\em gets Initial X position \end{DoxyCompactList}\item 
+int \hyperlink{group__Bike_ga2d556c34524f8fe950a96aa665aaffe8}{get\+InitialY} (struct \hyperlink{structBike}{Bike} bike)
+\begin{DoxyCompactList}\small\item\em gets Initial Y position \end{DoxyCompactList}\item 
+int \hyperlink{group__Bike_ga8d48f7de63dc2a17f3eac8b3e96f9b12}{get\+Direction} (struct \hyperlink{structBike}{Bike} bike)
+\begin{DoxyCompactList}\small\item\em gets bike direction \end{DoxyCompactList}\item 
+int \hyperlink{group__Bike_gaf4691615a2b7398e9c3b4ae2f93553e0}{get\+HeadX} (struct \hyperlink{structBike}{Bike} bike)
+\begin{DoxyCompactList}\small\item\em gets Head X position \end{DoxyCompactList}\item 
+int \hyperlink{group__Bike_gaafe273e5e247e3efd463e232686328d6}{get\+HeadY} (struct \hyperlink{structBike}{Bike} bike)
+\begin{DoxyCompactList}\small\item\em gets Head Y position \end{DoxyCompactList}\item 
+unsigned long \hyperlink{group__Bike_ga04fad9ee3b40712d1fde03fc5441ea73}{getcolor} (struct \hyperlink{structBike}{Bike} bike)
+\begin{DoxyCompactList}\small\item\em gets the bike color \end{DoxyCompactList}\item 
+void \hyperlink{group__Bike_ga0310311d1c88668900502c150b52120b}{set\+Direction} (\hyperlink{structBike}{Bike} $\ast$bike, int dir)
+\begin{DoxyCompactList}\small\item\em sets the bike direction \end{DoxyCompactList}\item 
+void \hyperlink{group__Bike_gadd2170ef6cbb83a919f06cf9c971c9a5}{move\+Head} (\hyperlink{structBike}{Bike} $\ast$bike, int speed)
+\begin{DoxyCompactList}\small\item\em gets the bike color \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__Bike_ga01cdf583ace46bc4e576c42b54ee628a}{Bike\+::initial\+\_\+x\+\_\+pos}
+\item 
+int \hyperlink{group__Bike_ga74f0f95635444a7570225a75f3a22056}{Bike\+::initial\+\_\+y\+\_\+pos}
+\item 
+int \hyperlink{group__Bike_ga9a5251a8d520f2ce0fc0e34dd7325a23}{Bike\+::direction}
+\item 
+int \hyperlink{group__Bike_ga3187c35b871d499fb88aca98de35282a}{Bike\+::head\+\_\+x\+\_\+pos}
+\item 
+int \hyperlink{group__Bike_ga48e90acd4f7eceb4ea0921f9a8b89f98}{Bike\+::head\+\_\+y\+\_\+pos}
+\item 
+unsigned long \hyperlink{group__Bike_ga7ba066e0787d8b239b8cb16775db0eac}{Bike\+::color}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structBike}{Bike} Struct Functions to manipulate the bike 
+
+\subsection{Typedef Documentation}
+\index{Bike@{Bike}!Bike@{Bike}}
+\index{Bike@{Bike}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{Bike}{Bike}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Bike}  {\bf Bike}}\hypertarget{group__Bike_ga85f4cbf9698a8ed38ad74f4e2d71341e}{}\label{group__Bike_ga85f4cbf9698a8ed38ad74f4e2d71341e}
+
+
+\subsection{Function Documentation}
+\index{Bike@{Bike}!getcolor@{getcolor}}
+\index{getcolor@{getcolor}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{getcolor(struct Bike bike)}{getcolor(struct Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long getcolor (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_ga04fad9ee3b40712d1fde03fc5441ea73}{}\label{group__Bike_ga04fad9ee3b40712d1fde03fc5441ea73}
+
+
+gets the bike color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bike color 
+\end{DoxyReturn}
+\index{Bike@{Bike}!get\+Direction@{get\+Direction}}
+\index{get\+Direction@{get\+Direction}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{get\+Direction(struct Bike bike)}{getDirection(struct Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Direction (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_ga8d48f7de63dc2a17f3eac8b3e96f9b12}{}\label{group__Bike_ga8d48f7de63dc2a17f3eac8b3e96f9b12}
+
+
+gets bike direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bike direction 
+\end{DoxyReturn}
+\index{Bike@{Bike}!get\+HeadX@{get\+HeadX}}
+\index{get\+HeadX@{get\+HeadX}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{get\+Head\+X(struct Bike bike)}{getHeadX(struct Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+HeadX (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_gaf4691615a2b7398e9c3b4ae2f93553e0}{}\label{group__Bike_gaf4691615a2b7398e9c3b4ae2f93553e0}
+
+
+gets Head X position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bike Head X position 
+\end{DoxyReturn}
+\index{Bike@{Bike}!get\+HeadY@{get\+HeadY}}
+\index{get\+HeadY@{get\+HeadY}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{get\+Head\+Y(struct Bike bike)}{getHeadY(struct Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+HeadY (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_gaafe273e5e247e3efd463e232686328d6}{}\label{group__Bike_gaafe273e5e247e3efd463e232686328d6}
+
+
+gets Head Y position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bike Head Y position 
+\end{DoxyReturn}
+\index{Bike@{Bike}!get\+InitialX@{get\+InitialX}}
+\index{get\+InitialX@{get\+InitialX}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{get\+Initial\+X(struct Bike bike)}{getInitialX(struct Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+InitialX (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_ga9d5bd9dd5a4b9347fa04fb0a47e7b138}{}\label{group__Bike_ga9d5bd9dd5a4b9347fa04fb0a47e7b138}
+
+
+gets Initial X position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bike initial X position 
+\end{DoxyReturn}
+\index{Bike@{Bike}!get\+InitialY@{get\+InitialY}}
+\index{get\+InitialY@{get\+InitialY}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{get\+Initial\+Y(struct Bike bike)}{getInitialY(struct Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+InitialY (
+\begin{DoxyParamCaption}
+\item[{struct {\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_ga2d556c34524f8fe950a96aa665aaffe8}{}\label{group__Bike_ga2d556c34524f8fe950a96aa665aaffe8}
+
+
+gets Initial Y position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bike initial Y position 
+\end{DoxyReturn}
+\index{Bike@{Bike}!move\+Head@{move\+Head}}
+\index{move\+Head@{move\+Head}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{move\+Head(\+Bike $\ast$bike, int speed)}{moveHead(Bike *bike, int speed)}}]{\setlength{\rightskip}{0pt plus 5cm}void move\+Head (
+\begin{DoxyParamCaption}
+\item[{{\bf Bike} $\ast$}]{bike, }
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_gadd2170ef6cbb83a919f06cf9c971c9a5}{}\label{group__Bike_gadd2170ef6cbb83a919f06cf9c971c9a5}
+
+
+gets the bike color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike object\\
+\hline
+{\em speed} & the bike speed \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{group__Bike_gadd2170ef6cbb83a919f06cf9c971c9a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Bike@{Bike}!set\+Direction@{set\+Direction}}
+\index{set\+Direction@{set\+Direction}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{set\+Direction(\+Bike $\ast$bike, int dir)}{setDirection(Bike *bike, int dir)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Bike} $\ast$}]{bike, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Bike_ga0310311d1c88668900502c150b52120b}{}\label{group__Bike_ga0310311d1c88668900502c150b52120b}
+
+
+sets the bike direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bike} & the bike object\\
+\hline
+{\em dir} & the bike direction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{Bike@{Bike}!color@{color}}
+\index{color@{color}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{color}{color}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Bike\+::color}\hypertarget{group__Bike_ga7ba066e0787d8b239b8cb16775db0eac}{}\label{group__Bike_ga7ba066e0787d8b239b8cb16775db0eac}
+bike color \index{Bike@{Bike}!direction@{direction}}
+\index{direction@{direction}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{direction}{direction}}]{\setlength{\rightskip}{0pt plus 5cm}int Bike\+::direction}\hypertarget{group__Bike_ga9a5251a8d520f2ce0fc0e34dd7325a23}{}\label{group__Bike_ga9a5251a8d520f2ce0fc0e34dd7325a23}
+direction \index{Bike@{Bike}!head\+\_\+x\+\_\+pos@{head\+\_\+x\+\_\+pos}}
+\index{head\+\_\+x\+\_\+pos@{head\+\_\+x\+\_\+pos}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{head\+\_\+x\+\_\+pos}{head_x_pos}}]{\setlength{\rightskip}{0pt plus 5cm}int Bike\+::head\+\_\+x\+\_\+pos}\hypertarget{group__Bike_ga3187c35b871d499fb88aca98de35282a}{}\label{group__Bike_ga3187c35b871d499fb88aca98de35282a}
+head X position \index{Bike@{Bike}!head\+\_\+y\+\_\+pos@{head\+\_\+y\+\_\+pos}}
+\index{head\+\_\+y\+\_\+pos@{head\+\_\+y\+\_\+pos}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{head\+\_\+y\+\_\+pos}{head_y_pos}}]{\setlength{\rightskip}{0pt plus 5cm}int Bike\+::head\+\_\+y\+\_\+pos}\hypertarget{group__Bike_ga48e90acd4f7eceb4ea0921f9a8b89f98}{}\label{group__Bike_ga48e90acd4f7eceb4ea0921f9a8b89f98}
+head Y position \index{Bike@{Bike}!initial\+\_\+x\+\_\+pos@{initial\+\_\+x\+\_\+pos}}
+\index{initial\+\_\+x\+\_\+pos@{initial\+\_\+x\+\_\+pos}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{initial\+\_\+x\+\_\+pos}{initial_x_pos}}]{\setlength{\rightskip}{0pt plus 5cm}int Bike\+::initial\+\_\+x\+\_\+pos}\hypertarget{group__Bike_ga01cdf583ace46bc4e576c42b54ee628a}{}\label{group__Bike_ga01cdf583ace46bc4e576c42b54ee628a}
+initial X position \index{Bike@{Bike}!initial\+\_\+y\+\_\+pos@{initial\+\_\+y\+\_\+pos}}
+\index{initial\+\_\+y\+\_\+pos@{initial\+\_\+y\+\_\+pos}!Bike@{Bike}}
+\subsubsection[{\texorpdfstring{initial\+\_\+y\+\_\+pos}{initial_y_pos}}]{\setlength{\rightskip}{0pt plus 5cm}int Bike\+::initial\+\_\+y\+\_\+pos}\hypertarget{group__Bike_ga74f0f95635444a7570225a75f3a22056}{}\label{group__Bike_ga74f0f95635444a7570225a75f3a22056}
+initial Y position 

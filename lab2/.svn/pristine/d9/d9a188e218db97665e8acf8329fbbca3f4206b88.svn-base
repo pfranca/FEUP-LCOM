@@ -1,0 +1,57 @@
+#include <minix/syslib.h>
+#include <minix/drivers.h>
+#include "i8254.h"
+
+int timer_set_frequency(unsigned char timer, unsigned long freq) {
+
+	return 1;
+}
+
+int timer_subscribe_int(void ) {
+
+	return 1;
+}
+
+int timer_unsubscribe_int() {
+
+	return 1;
+}
+
+void timer_int_handler() {
+
+}
+
+int timer_get_conf(unsigned char timer, unsigned char *st) {
+	
+	//retorna erro se timer introduzido nao for 0, 1 ou 2
+	if(timer!='0' && timer!='1' && timer!='2'){
+		printf("erro timer_get_vonf(). timer invalido");
+		return 1;
+	}
+
+	unsigned long read_back_cmd= (TIMER_RB_CMD | TIMER_RB_/*count ou status*/ _ | TIMER_RB_SEL(/*cast char par along*/));
+
+
+
+	return 1;
+}
+
+int timer_display_conf(unsigned char conf) {
+	
+	return 1;
+}
+
+int timer_test_time_base(unsigned long freq) {
+	
+	return 1;
+}
+
+int timer_test_int(unsigned long time) {
+	
+	return 1;
+}
+
+int timer_test_config(unsigned char timer) {
+	
+	return 1;
+}

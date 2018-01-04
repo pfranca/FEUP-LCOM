@@ -1,0 +1,6 @@
+<map id="checkColision" name="checkColision">
+<area shape="rect" id="node2" href="$group__Bike.html#ga8d48f7de63dc2a17f3eac8b3e96f9b12" title="gets bike direction " alt="" coords="157,5,249,32"/>
+<area shape="rect" id="node3" href="$group__video__gr.html#ga21e5df0f0f8fe4b0fa3841550da32c62" title="gets a pixel color " alt="" coords="157,56,249,83"/>
+<area shape="rect" id="node4" href="$group__Bike.html#gaf4691615a2b7398e9c3b4ae2f93553e0" title="gets Head X position " alt="" coords="163,107,243,133"/>
+<area shape="rect" id="node5" href="$group__Bike.html#gaafe273e5e247e3efd463e232686328d6" title="gets Head Y position " alt="" coords="163,157,243,184"/>
+</map>

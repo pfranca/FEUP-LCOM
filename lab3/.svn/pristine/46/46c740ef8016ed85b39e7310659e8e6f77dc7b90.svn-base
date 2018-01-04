@@ -1,0 +1,19 @@
+#ifndef _LCOM_I8042_H_
+#define _LCOM_I8042_H_
+
+/** @defgroup i8042 i8042
+ * @{
+ *
+ * Constants for programming the i8042 KeyBoard Controller.
+ */
+
+#define BIT(n) (0x01<<(n))
+
+#define KBC_IRQ	        1    /**< @brief KBC IRQ line */
+
+
+
+
+/**@}*/
+
+#endif /* _LCOM_I8042_H */

@@ -1,0 +1,128 @@
+#include <minix/drivers.h>
+#include <limits.h>
+#include <string.h>
+#include <errno.h>
+#include <stdio.h>
+#include "test5.h"
+//#include "i8042.h"
+//#include "mouse.h"
+
+
+
+static int proc_args(int argc, char **argv);
+static unsigned long parse_ulong(char *str, int base);
+static void print_usage(char **argv);
+
+int main(int argc, char **argv)
+{
+	/* DO NOT FORGET TO initialize service */
+	sef_startup();
+
+
+	if (argc == 1) {					/* Prints usage of the program if no arguments are passed */
+		print_usage(argv);
+		return 0;
+	}
+	else return proc_args(argc, argv);
+}
+
+static void print_usage(char **argv)
+{
+	printf("Usage: one of the following:\n"
+			"\t service run %s -args \"init <decimal no.- modes> <decimal no.- delay>s\"\n"
+			"\t service run %s -args \"square <decimal no.- x> <decimal no.- y> <decimal no.- size> <decimal no.- color>\"\n"
+			"\t service run %s -args \"line <decimal no. - xi> <decimal no. - yi> <decimal no. - xf> <decimal no. - yf> <decimal no. - color>\"\n",
+			argv[0], argv[0], argv[0]);
+}
+
+static int proc_args(int argc, char **argv)
+{
+	unsigned long mode, delay, x, y, xf, yf, size, color;
+	if (strncmp(argv[1], "init", strlen("init")) == 0) {
+		if (argc != 4) {
+			printf("test5: wrong no. of arguments for video_test_init()\n");
+			return 1;
+		}
+		mode = parse_ulong(argv[2], 16);						/* Parses string to unsigned long */
+		delay = parse_ulong(argv[3], 10);
+		if (mode == ULONG_MAX)
+			return 1;
+		if (delay == ULONG_MAX)
+					return 1;
+		printf("test5::video_test_init(%lu, %lu)\n", mode, delay);
+		return video_test_init(mode, delay);
+	}
+
+	else if (strncmp(argv[1], "square", strlen("square")) == 0) {
+		if (argc != 6) {
+			printf("test5: wrong no. of arguments for video_test_square()\n");
+			return 1;
+		}
+		x = parse_ulong(argv[2], 10);
+		y = parse_ulong(argv[3], 10);
+		size = parse_ulong(argv[4], 10);
+		color = parse_ulong(argv[5], 10);
+		if (x == ULONG_MAX)
+			return 1;
+		if (y == ULONG_MAX)
+			return 1;
+		if (size == ULONG_MAX)
+			return 1;
+		if (color == ULONG_MAX)
+			return 1;
+		printf("test5::video_test_square(%lu , %lu, %lu, %lu)\n", x, y, size, color);
+		return video_test_square(x, y, size, color);
+	}
+
+	else if (strncmp(argv[1], "line", strlen("line")) == 0) {
+		if (argc != 7) {
+			printf("test5: wrong no of arguments for video_test_line()\n");
+			return 1;
+		}
+		x = parse_ulong(argv[2], 10);
+		y = parse_ulong(argv[3], 10);
+		xf = parse_ulong(argv[4], 10);
+		yf = parse_ulong(argv[5], 10);
+		color = parse_ulong(argv[6], 10);
+		if (x == ULONG_MAX)
+			return 1;
+		if (y == ULONG_MAX)
+			return 1;
+		if (xf == ULONG_MAX)
+			return 1;
+		if (yf == ULONG_MAX)
+			return 1;
+		if (color == ULONG_MAX)
+			return 1;
+		printf("test5::video_test_line(%lu, %lu , %lu, %lu, %lu)\n", x, y, xf, yf, color);
+		return video_test_line(x, y, xf, yf, color);
+	}
+
+	else {
+		printf("test5: %s - no valid function!\n", argv[1]);
+		return 1;
+	}
+}
+
+static unsigned long parse_ulong(char *str, int base)
+{
+	char *endptr;
+	unsigned long val;
+
+	/* Convert string to unsigned long */
+	val = strtoul(str, &endptr, base);
+
+	/* Check for conversion errors */
+	if ((errno == ERANGE && val == ULONG_MAX) || (errno != 0 && val == 0)) {
+		perror("strtoul");
+		return ULONG_MAX;
+	}
+
+	if (endptr == str) {
+		printf("teste3: parse_ulong: no digits were found in %s\n", str);
+		return ULONG_MAX;
+	}
+
+	/* Successful conversion */
+	return val;
+}

@@ -1,0 +1,263 @@
+\hypertarget{group__video__gr}{}\section{video\+\_\+gr}
+\label{group__video__gr}\index{video\+\_\+gr@{video\+\_\+gr}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__video__gr_gacef21667c79365d57a084bed994c2189}{vg\+\_\+init} (unsigned short mode)
+\begin{DoxyCompactList}\small\item\em Initializes the video module in graphics mode. \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}{vg\+\_\+exit} (void)
+\begin{DoxyCompactList}\small\item\em Returns to default Minix 3 text mode (0x03\+: 25 x 80, 16 colors) \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga511311dbbd19f3b1f0c99111eee21b9a}{vg\+\_\+draw\+\_\+pixel} (unsigned short x, unsigned short y, unsigned long color)
+\begin{DoxyCompactList}\small\item\em draws one pixel on the screen \end{DoxyCompactList}\item 
+unsigned long \hyperlink{group__video__gr_ga21e5df0f0f8fe4b0fa3841550da32c62}{vg\+\_\+get\+Color} (unsigned short x, unsigned short y)
+\begin{DoxyCompactList}\small\item\em gets a pixel color \end{DoxyCompactList}\item 
+void \hyperlink{group__video__gr_ga58144867b7ba0851547e9a599b05107b}{vg\+\_\+draw\+\_\+bike} (unsigned short x, unsigned short y, unsigned long color)
+\begin{DoxyCompactList}\small\item\em draws the bike \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__video__gr_gaedd0b1a041eee82028cf2c5d581ee0a6}{get\+Secondary\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em return the secondary buffer address \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga1eee563c2d26857ee2e35d7e8656e841}{get\+Ver\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em gets vertical resolution \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga85f07897fcef302cfd16a33cb690a70a}{get\+Hor\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em gets horizontal resolution \end{DoxyCompactList}\item 
+void \hyperlink{group__video__gr_gaa1defaab9e74b37f6c3e7ec3e83a95a3}{draw\+\_\+pixel} (int x, int y, int color)
+\item 
+void \hyperlink{group__video__gr_gab27465d29f462aeaf3e710695fc20594}{vg\+\_\+png} (unsigned char $\ast$image, int width, int height, int start\+\_\+x, int start\+\_\+y)
+\item 
+void \hyperlink{group__video__gr_gae73efbc5eb5fa85cab0358d0e4de8809}{vg\+\_\+clear} ()
+\item 
+void \hyperlink{group__video__gr_ga6a48d2eaa7f116fca3dde151edee4f98}{vg\+\_\+copy} ()
+\item 
+void \hyperlink{group__video__gr_ga71250a7e4fc5b89a38e76c7d68f3a5fc}{vg\+\_\+free} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for outputing data to screen in graphics mode 
+
+\subsection{Function Documentation}
+\index{video\+\_\+gr@{video\+\_\+gr}!draw\+\_\+pixel@{draw\+\_\+pixel}}
+\index{draw\+\_\+pixel@{draw\+\_\+pixel}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{draw\+\_\+pixel(int x, int y, int color)}{draw_pixel(int x, int y, int color)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+\_\+pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_gaa1defaab9e74b37f6c3e7ec3e83a95a3}{}\label{group__video__gr_gaa1defaab9e74b37f6c3e7ec3e83a95a3}
+\index{video\+\_\+gr@{video\+\_\+gr}!get\+Hor\+Resolution@{get\+Hor\+Resolution}}
+\index{get\+Hor\+Resolution@{get\+Hor\+Resolution}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{get\+Hor\+Resolution()}{getHorResolution()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Hor\+Resolution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga85f07897fcef302cfd16a33cb690a70a}{}\label{group__video__gr_ga85f07897fcef302cfd16a33cb690a70a}
+
+
+gets horizontal resolution 
+
+\begin{DoxyReturn}{Returns}
+horizontal resolution 
+\end{DoxyReturn}
+\index{video\+\_\+gr@{video\+\_\+gr}!get\+Secondary\+Buffer@{get\+Secondary\+Buffer}}
+\index{get\+Secondary\+Buffer@{get\+Secondary\+Buffer}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{get\+Secondary\+Buffer()}{getSecondaryBuffer()}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Secondary\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_gaedd0b1a041eee82028cf2c5d581ee0a6}{}\label{group__video__gr_gaedd0b1a041eee82028cf2c5d581ee0a6}
+
+
+return the secondary buffer address 
+
+\begin{DoxyReturn}{Returns}
+secondary buffer address 
+\end{DoxyReturn}
+\index{video\+\_\+gr@{video\+\_\+gr}!get\+Ver\+Resolution@{get\+Ver\+Resolution}}
+\index{get\+Ver\+Resolution@{get\+Ver\+Resolution}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{get\+Ver\+Resolution()}{getVerResolution()}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Ver\+Resolution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga1eee563c2d26857ee2e35d7e8656e841}{}\label{group__video__gr_ga1eee563c2d26857ee2e35d7e8656e841}
+
+
+gets vertical resolution 
+
+\begin{DoxyReturn}{Returns}
+vertical resolution 
+\end{DoxyReturn}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+clear@{vg\+\_\+clear}}
+\index{vg\+\_\+clear@{vg\+\_\+clear}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+clear()}{vg_clear()}}]{\setlength{\rightskip}{0pt plus 5cm}void vg\+\_\+clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_gae73efbc5eb5fa85cab0358d0e4de8809}{}\label{group__video__gr_gae73efbc5eb5fa85cab0358d0e4de8809}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+copy@{vg\+\_\+copy}}
+\index{vg\+\_\+copy@{vg\+\_\+copy}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+copy()}{vg_copy()}}]{\setlength{\rightskip}{0pt plus 5cm}void vg\+\_\+copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga6a48d2eaa7f116fca3dde151edee4f98}{}\label{group__video__gr_ga6a48d2eaa7f116fca3dde151edee4f98}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+draw\+\_\+bike@{vg\+\_\+draw\+\_\+bike}}
+\index{vg\+\_\+draw\+\_\+bike@{vg\+\_\+draw\+\_\+bike}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+draw\+\_\+bike(unsigned short x, unsigned short y, unsigned long color)}{vg_draw_bike(unsigned short x, unsigned short y, unsigned long color)}}]{\setlength{\rightskip}{0pt plus 5cm}void vg\+\_\+draw\+\_\+bike (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{x, }
+\item[{unsigned short}]{y, }
+\item[{unsigned long}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga58144867b7ba0851547e9a599b05107b}{}\label{group__video__gr_ga58144867b7ba0851547e9a599b05107b}
+
+
+draws the bike 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & pixel x coord\\
+\hline
+{\em y} & pixel y coord\\
+\hline
+{\em color} & pixel color\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 upon success, non-\/zero upon failure 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{group__video__gr_ga58144867b7ba0851547e9a599b05107b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+draw\+\_\+pixel@{vg\+\_\+draw\+\_\+pixel}}
+\index{vg\+\_\+draw\+\_\+pixel@{vg\+\_\+draw\+\_\+pixel}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+draw\+\_\+pixel(unsigned short x, unsigned short y, unsigned long color)}{vg_draw_pixel(unsigned short x, unsigned short y, unsigned long color)}}]{\setlength{\rightskip}{0pt plus 5cm}int vg\+\_\+draw\+\_\+pixel (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{x, }
+\item[{unsigned short}]{y, }
+\item[{unsigned long}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga511311dbbd19f3b1f0c99111eee21b9a}{}\label{group__video__gr_ga511311dbbd19f3b1f0c99111eee21b9a}
+
+
+draws one pixel on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & pixel x coord\\
+\hline
+{\em y} & pixel y coord\\
+\hline
+{\em color} & pixel color\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 upon success, non-\/zero upon failure 
+\end{DoxyReturn}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+exit@{vg\+\_\+exit}}
+\index{vg\+\_\+exit@{vg\+\_\+exit}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+exit(void)}{vg_exit(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int vg\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}{}\label{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}
+
+
+Returns to default Minix 3 text mode (0x03\+: 25 x 80, 16 colors) 
+
+\begin{DoxyReturn}{Returns}
+0 upon success, non-\/zero upon failure 
+\end{DoxyReturn}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+free@{vg\+\_\+free}}
+\index{vg\+\_\+free@{vg\+\_\+free}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+free()}{vg_free()}}]{\setlength{\rightskip}{0pt plus 5cm}void vg\+\_\+free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga71250a7e4fc5b89a38e76c7d68f3a5fc}{}\label{group__video__gr_ga71250a7e4fc5b89a38e76c7d68f3a5fc}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+get\+Color@{vg\+\_\+get\+Color}}
+\index{vg\+\_\+get\+Color@{vg\+\_\+get\+Color}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+get\+Color(unsigned short x, unsigned short y)}{vg_getColor(unsigned short x, unsigned short y)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long vg\+\_\+get\+Color (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{x, }
+\item[{unsigned short}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_ga21e5df0f0f8fe4b0fa3841550da32c62}{}\label{group__video__gr_ga21e5df0f0f8fe4b0fa3841550da32c62}
+
+
+gets a pixel color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & pixel x coord\\
+\hline
+{\em y} & pixel y coord\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 upon success, non-\/zero upon failure 
+\end{DoxyReturn}
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+init@{vg\+\_\+init}}
+\index{vg\+\_\+init@{vg\+\_\+init}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+init(unsigned short mode)}{vg_init(unsigned short mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ vg\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_gacef21667c79365d57a084bed994c2189}{}\label{group__video__gr_gacef21667c79365d57a084bed994c2189}
+
+
+Initializes the video module in graphics mode. 
+
+Uses the V\+BE I\+NT 0x10 interface to set the desired graphics mode, maps V\+R\+AM to the process\textquotesingle{} address space and initializes static global variables with the resolution of the screen, and the number of colors
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & 16-\/bit V\+BE mode to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Virtual address V\+R\+AM was mapped to. N\+U\+LL, upon failure. 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_gacef21667c79365d57a084bed994c2189_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+png@{vg\+\_\+png}}
+\index{vg\+\_\+png@{vg\+\_\+png}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection[{\texorpdfstring{vg\+\_\+png(unsigned char $\ast$image, int width, int height, int start\+\_\+x, int start\+\_\+y)}{vg_png(unsigned char *image, int width, int height, int start_x, int start_y)}}]{\setlength{\rightskip}{0pt plus 5cm}void vg\+\_\+png (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{image, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{start\+\_\+x, }
+\item[{int}]{start\+\_\+y}
+\end{DoxyParamCaption}
+)}\hypertarget{group__video__gr_gab27465d29f462aeaf3e710695fc20594}{}\label{group__video__gr_gab27465d29f462aeaf3e710695fc20594}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{group__video__gr_gab27465d29f462aeaf3e710695fc20594_cgraph}
+\end{center}
+\end{figure}
+
+

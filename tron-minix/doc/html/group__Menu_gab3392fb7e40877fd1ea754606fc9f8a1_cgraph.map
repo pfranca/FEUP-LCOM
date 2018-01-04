@@ -1,0 +1,8 @@
+<map id="updateMenu" name="updateMenu">
+<area shape="rect" id="node2" href="$group__Mouse.html#ga5075265654e56158f16cdbb0f0e4e94b" title="check if the mouse is inside the window " alt="" coords="147,5,239,32"/>
+<area shape="rect" id="node3" href="$group__Mouse.html#ga8d3f3987b96a716cc9c3aa8e484ff1d7" title="gets the mouse object " alt="" coords="153,56,232,83"/>
+<area shape="rect" id="node4" href="$group__Mouse.html#ga108813d01ba189cc8bb0dca728c932a8" title="Enable mouse data report in stream mode. " alt="" coords="287,31,465,57"/>
+<area shape="rect" id="node7" href="$group__Mouse.html#gabd64fd476265e0fb0463cc3d82823701" title="new mouse instantiation " alt="" coords="333,81,419,108"/>
+<area shape="rect" id="node5" href="$group__Keyboard.html#gaed40b556eb233ac6f329eb8396192b6f" title="write command to the kbc First reads status comand byte " alt="" coords="513,5,592,32"/>
+<area shape="rect" id="node6" href="$group__Keyboard.html#ga0028905df4260d371b30e92f547c712a" title="Read OUTPUT BUFFER (0x60) " alt="" coords="515,56,590,83"/>
+</map>

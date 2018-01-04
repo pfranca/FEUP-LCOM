@@ -1,0 +1,38 @@
+\hypertarget{keyboard_8c}{}\section{keyboard.\+c File Reference}
+\label{keyboard_8c}\index{keyboard.\+c@{keyboard.\+c}}
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\\*
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\\*
+{\ttfamily \#include $<$minix/com.\+h$>$}\\*
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\\*
+Include dependency graph for keyboard.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__Keyboard_ga9a4aaf9e5cee256ad4af890935f2a976}{kbc\+\_\+subscribe\+\_\+int} (void)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables K\+BC interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{group__Keyboard_ga0e945987c2233f1c30a645ec5fc750c1}{kbc\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes K\+BC interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{group__Keyboard_ga0028905df4260d371b30e92f547c712a}{kbc\+\_\+read} ()
+\begin{DoxyCompactList}\small\item\em Read O\+U\+T\+P\+UT B\+U\+F\+F\+ER (0x60) \end{DoxyCompactList}\item 
+int \hyperlink{group__Keyboard_gaed40b556eb233ac6f329eb8396192b6f}{kbc\+\_\+write} (unsigned long porto, unsigned long cmd)
+\begin{DoxyCompactList}\small\item\em write command to the kbc First reads status comand byte \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{keyboard_8c_a0bac4ccb7ceeff54a0b16bf899694f06}{kbc\+\_\+hook} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{keyboard.\+c@{keyboard.\+c}!kbc\+\_\+hook@{kbc\+\_\+hook}}
+\index{kbc\+\_\+hook@{kbc\+\_\+hook}!keyboard.\+c@{keyboard.\+c}}
+\subsubsection[{\texorpdfstring{kbc\+\_\+hook}{kbc_hook}}]{\setlength{\rightskip}{0pt plus 5cm}int kbc\+\_\+hook = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{keyboard_8c_a0bac4ccb7ceeff54a0b16bf899694f06}{}\label{keyboard_8c_a0bac4ccb7ceeff54a0b16bf899694f06}

@@ -1,0 +1,5 @@
+<map id="deleteMenu" name="deleteMenu">
+<area shape="rect" id="node2" href="$group__video__gr.html#ga71250a7e4fc5b89a38e76c7d68f3a5fc" title="vg_free" alt="" coords="146,5,211,32"/>
+<area shape="rect" id="node3" href="$stbi__wrapper_8c.html#a69419313c4e78cb8556180c6327ffb8c" title="stbi_free" alt="" coords="143,56,215,83"/>
+<area shape="rect" id="node4" href="$stb__image_8h.html#ad3e11bb44412a7ba348acfbad09caacb" title="stbi_image_free" alt="" coords="263,56,377,83"/>
+</map>

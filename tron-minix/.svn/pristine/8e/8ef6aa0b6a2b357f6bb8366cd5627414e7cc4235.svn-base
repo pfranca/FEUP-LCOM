@@ -1,0 +1,80 @@
+\hypertarget{group__Keyboard}{}\section{Keyboard}
+\label{group__Keyboard}\index{Keyboard@{Keyboard}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__Keyboard_ga9a4aaf9e5cee256ad4af890935f2a976}{kbc\+\_\+subscribe\+\_\+int} (void)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables K\+BC interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{group__Keyboard_ga0e945987c2233f1c30a645ec5fc750c1}{kbc\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes K\+BC interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{group__Keyboard_ga0028905df4260d371b30e92f547c712a}{kbc\+\_\+read} ()
+\begin{DoxyCompactList}\small\item\em Read O\+U\+T\+P\+UT B\+U\+F\+F\+ER (0x60) \end{DoxyCompactList}\item 
+int \hyperlink{group__Keyboard_gaed40b556eb233ac6f329eb8396192b6f}{kbc\+\_\+write} (unsigned long porto, unsigned long cmd)
+\begin{DoxyCompactList}\small\item\em write command to the kbc First reads status comand byte \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for using the i8042 K\+BC 
+
+\subsection{Function Documentation}
+\index{Keyboard@{Keyboard}!kbc\+\_\+read@{kbc\+\_\+read}}
+\index{kbc\+\_\+read@{kbc\+\_\+read}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{kbc\+\_\+read()}{kbc_read()}}]{\setlength{\rightskip}{0pt plus 5cm}int kbc\+\_\+read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Keyboard_ga0028905df4260d371b30e92f547c712a}{}\label{group__Keyboard_ga0028905df4260d371b30e92f547c712a}
+
+
+Read O\+U\+T\+P\+UT B\+U\+F\+F\+ER (0x60) 
+
+\begin{DoxyReturn}{Returns}
+Return code red from the O\+UT B\+U\+F\+F\+ER; 0x\+F\+FF on failure 
+\end{DoxyReturn}
+\index{Keyboard@{Keyboard}!kbc\+\_\+subscribe\+\_\+int@{kbc\+\_\+subscribe\+\_\+int}}
+\index{kbc\+\_\+subscribe\+\_\+int@{kbc\+\_\+subscribe\+\_\+int}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{kbc\+\_\+subscribe\+\_\+int(void)}{kbc_subscribe_int(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int kbc\+\_\+subscribe\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Keyboard_ga9a4aaf9e5cee256ad4af890935f2a976}{}\label{group__Keyboard_ga9a4aaf9e5cee256ad4af890935f2a976}
+
+
+Subscribes and enables K\+BC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns bit order in interrupt mask; negative value on failure 
+\end{DoxyReturn}
+\index{Keyboard@{Keyboard}!kbc\+\_\+unsubscribe\+\_\+int@{kbc\+\_\+unsubscribe\+\_\+int}}
+\index{kbc\+\_\+unsubscribe\+\_\+int@{kbc\+\_\+unsubscribe\+\_\+int}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{kbc\+\_\+unsubscribe\+\_\+int()}{kbc_unsubscribe_int()}}]{\setlength{\rightskip}{0pt plus 5cm}int kbc\+\_\+unsubscribe\+\_\+int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Keyboard_ga0e945987c2233f1c30a645ec5fc750c1}{}\label{group__Keyboard_ga0e945987c2233f1c30a645ec5fc750c1}
+
+
+Unsubscribes K\+BC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\index{Keyboard@{Keyboard}!kbc\+\_\+write@{kbc\+\_\+write}}
+\index{kbc\+\_\+write@{kbc\+\_\+write}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{kbc\+\_\+write(unsigned long porto, unsigned long cmd)}{kbc_write(unsigned long porto, unsigned long cmd)}}]{\setlength{\rightskip}{0pt plus 5cm}int kbc\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{porto, }
+\item[{unsigned long}]{cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Keyboard_gaed40b556eb233ac6f329eb8396192b6f}{}\label{group__Keyboard_gaed40b556eb233ac6f329eb8396192b6f}
+
+
+write command to the kbc First reads status comand byte 
+
+
+\begin{DoxyParams}{Parameters}
+{\em porto} & Port to write to \\
+\hline
+{\em cmd} & Command to write \\
+\hline
+\end{DoxyParams}

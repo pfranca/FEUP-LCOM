@@ -1,0 +1,368 @@
+\hypertarget{group__Mouse}{}\section{Mouse}
+\label{group__Mouse}\index{Mouse@{Mouse}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMouse}{Mouse}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structMouse}{Mouse} $\ast$ \hyperlink{group__Mouse_gabd64fd476265e0fb0463cc3d82823701}{new\+Mouse} ()
+\begin{DoxyCompactList}\small\item\em new mouse instantiation \end{DoxyCompactList}\item 
+\hyperlink{structMouse}{Mouse} $\ast$ \hyperlink{group__Mouse_ga8d3f3987b96a716cc9c3aa8e484ff1d7}{get\+Mouse} ()
+\begin{DoxyCompactList}\small\item\em gets the mouse object \end{DoxyCompactList}\item 
+void \hyperlink{group__Mouse_ga6498182307b6c3f4a9c9c03a9d5116dc}{update\+Mouse} ()
+\item 
+void \hyperlink{group__Mouse_ga6a0f0fbd9fee2962ff384838bbf9fade}{draw\+Mouse} (unsigned char $\ast$cursor, int width, int height)
+\begin{DoxyCompactList}\small\item\em new mouse instantiation \end{DoxyCompactList}\item 
+void \hyperlink{group__Mouse_ga54e27b79923964c8882407116930fc70}{delete\+Mouse} ()
+\item 
+void \hyperlink{group__Mouse_ga44baaa1c128be31e1baba247c3b4b6db}{packet\+\_\+handler} ()
+\item 
+int \hyperlink{group__Mouse_ga5075265654e56158f16cdbb0f0e4e94b}{check\+Inside} (unsigned xi, unsigned xf, unsigned yi, unsigned yf)
+\begin{DoxyCompactList}\small\item\em check if the mouse is inside the window \end{DoxyCompactList}\item 
+int \hyperlink{group__Mouse_ga51e6ee02a5c0a7e618abde7250cd0841}{mouse\+\_\+subscribe\+\_\+int} (void)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables K\+BC interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{group__Mouse_ga685ad2706aca36d9869a30a19b9f446a}{mouse\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes K\+BC interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{group__Mouse_ga108813d01ba189cc8bb0dca728c932a8}{mouse\+\_\+enable\+\_\+data\+\_\+report} ()
+\begin{DoxyCompactList}\small\item\em Enable mouse data report in stream mode. \end{DoxyCompactList}\item 
+int \hyperlink{group__Mouse_gac13ad81d843b4d50815de4b20a28db53}{mouse\+\_\+disable\+\_\+data\+\_\+report} ()
+\begin{DoxyCompactList}\small\item\em Disable mouse data report in stream mode. \end{DoxyCompactList}\item 
+int \hyperlink{group__Mouse_ga16a521d1919cbd8f434d8b5d535a639b}{mouse\+\_\+set\+\_\+stream\+\_\+mode} ()
+\begin{DoxyCompactList}\small\item\em Puts mouse working in stream mode. \end{DoxyCompactList}\item 
+int \hyperlink{group__Mouse_ga1e54e352956b51fbf324d36d24befcbb}{mouse\+\_\+get\+\_\+packet} ()
+\begin{DoxyCompactList}\small\item\em Gets the mouse packets and prints them on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__Mouse_ga136eea114b70f46392b89cc3779d4291}{Mouse\+::x}
+\item 
+int \hyperlink{group__Mouse_ga4a29b1c18faaa2fbe39ff985ba9d6737}{Mouse\+::y}
+\item 
+int \hyperlink{group__Mouse_ga1fc496df2223cb17437b296acbe02e50}{Mouse\+::packet\+\_\+idx}
+\item 
+int \hyperlink{group__Mouse_ga64798c8dfb1b60b4ce76bc9859719077}{Mouse\+::complete\+\_\+packet}
+\item 
+unsigned long \hyperlink{group__Mouse_ga8bfb0c35eb14423f5086a355d52dc733}{Mouse\+::packet} \mbox{[}3\mbox{]}
+\item 
+int \hyperlink{group__Mouse_ga401d046e1cad0fad3908120ab85b9396}{Mouse\+::left\+Button\+Down}
+\item 
+int \hyperlink{group__Mouse_ga9a74cd5fb66c4936d44a72962df7830c}{Mouse\+::left\+Button\+Released}
+\item 
+int \hyperlink{group__Mouse_gad3b4a3a6fd6d53630bdf7aa81d74f744}{Mouse\+::draw}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for using the i8042 K\+BC I\+N\+T\+E\+R\+F\+A\+C\+I\+NG W\+I\+TH T\+HE M\+O\+U\+SE 
+
+\subsection{Function Documentation}
+\index{Mouse@{Mouse}!check\+Inside@{check\+Inside}}
+\index{check\+Inside@{check\+Inside}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{check\+Inside(unsigned xi, unsigned xf, unsigned yi, unsigned yf)}{checkInside(unsigned xi, unsigned xf, unsigned yi, unsigned yf)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+Inside (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{xi, }
+\item[{unsigned}]{xf, }
+\item[{unsigned}]{yi, }
+\item[{unsigned}]{yf}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga5075265654e56158f16cdbb0f0e4e94b}{}\label{group__Mouse_ga5075265654e56158f16cdbb0f0e4e94b}
+
+
+check if the mouse is inside the window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xi} & initial X coord\\
+\hline
+{\em xf} & final X coord\\
+\hline
+{\em yi} & initial Y coord\\
+\hline
+{\em yf} & final Y coord\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\index{Mouse@{Mouse}!delete\+Mouse@{delete\+Mouse}}
+\index{delete\+Mouse@{delete\+Mouse}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{delete\+Mouse()}{deleteMouse()}}]{\setlength{\rightskip}{0pt plus 5cm}void delete\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga54e27b79923964c8882407116930fc70}{}\label{group__Mouse_ga54e27b79923964c8882407116930fc70}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__Mouse_ga54e27b79923964c8882407116930fc70_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!draw\+Mouse@{draw\+Mouse}}
+\index{draw\+Mouse@{draw\+Mouse}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{draw\+Mouse(unsigned char $\ast$cursor, int width, int height)}{drawMouse(unsigned char *cursor, int width, int height)}}]{\setlength{\rightskip}{0pt plus 5cm}void draw\+Mouse (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{cursor, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga6a0f0fbd9fee2962ff384838bbf9fade}{}\label{group__Mouse_ga6a0f0fbd9fee2962ff384838bbf9fade}
+
+
+new mouse instantiation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & the mouse cursor image\\
+\hline
+{\em width} & the mouse cursor image width\\
+\hline
+{\em width} & the mouse cursor image height \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{group__Mouse_ga6a0f0fbd9fee2962ff384838bbf9fade_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!get\+Mouse@{get\+Mouse}}
+\index{get\+Mouse@{get\+Mouse}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{get\+Mouse()}{getMouse()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mouse}$\ast$ get\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga8d3f3987b96a716cc9c3aa8e484ff1d7}{}\label{group__Mouse_ga8d3f3987b96a716cc9c3aa8e484ff1d7}
+
+
+gets the mouse object 
+
+\begin{DoxyReturn}{Returns}
+mouse object 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__Mouse_ga8d3f3987b96a716cc9c3aa8e484ff1d7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!mouse\+\_\+disable\+\_\+data\+\_\+report@{mouse\+\_\+disable\+\_\+data\+\_\+report}}
+\index{mouse\+\_\+disable\+\_\+data\+\_\+report@{mouse\+\_\+disable\+\_\+data\+\_\+report}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{mouse\+\_\+disable\+\_\+data\+\_\+report()}{mouse_disable_data_report()}}]{\setlength{\rightskip}{0pt plus 5cm}int mouse\+\_\+disable\+\_\+data\+\_\+report (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_gac13ad81d843b4d50815de4b20a28db53}{}\label{group__Mouse_gac13ad81d843b4d50815de4b20a28db53}
+
+
+Disable mouse data report in stream mode. 
+
+\begin{DoxyReturn}{Returns}
+Returns A\+CK, N\+A\+CK or E\+R\+R\+OR 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{group__Mouse_gac13ad81d843b4d50815de4b20a28db53_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!mouse\+\_\+enable\+\_\+data\+\_\+report@{mouse\+\_\+enable\+\_\+data\+\_\+report}}
+\index{mouse\+\_\+enable\+\_\+data\+\_\+report@{mouse\+\_\+enable\+\_\+data\+\_\+report}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{mouse\+\_\+enable\+\_\+data\+\_\+report()}{mouse_enable_data_report()}}]{\setlength{\rightskip}{0pt plus 5cm}int mouse\+\_\+enable\+\_\+data\+\_\+report (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga108813d01ba189cc8bb0dca728c932a8}{}\label{group__Mouse_ga108813d01ba189cc8bb0dca728c932a8}
+
+
+Enable mouse data report in stream mode. 
+
+\begin{DoxyReturn}{Returns}
+Returns A\+CK, N\+A\+CK or E\+R\+R\+OR 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{group__Mouse_ga108813d01ba189cc8bb0dca728c932a8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!mouse\+\_\+get\+\_\+packet@{mouse\+\_\+get\+\_\+packet}}
+\index{mouse\+\_\+get\+\_\+packet@{mouse\+\_\+get\+\_\+packet}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{mouse\+\_\+get\+\_\+packet()}{mouse_get_packet()}}]{\setlength{\rightskip}{0pt plus 5cm}int mouse\+\_\+get\+\_\+packet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga1e54e352956b51fbf324d36d24befcbb}{}\label{group__Mouse_ga1e54e352956b51fbf324d36d24befcbb}
+
+
+Gets the mouse packets and prints them on the screen. 
+
+\begin{DoxyReturn}{Returns}
+1 in case of success, 0 otherwise 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{group__Mouse_ga1e54e352956b51fbf324d36d24befcbb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!mouse\+\_\+set\+\_\+stream\+\_\+mode@{mouse\+\_\+set\+\_\+stream\+\_\+mode}}
+\index{mouse\+\_\+set\+\_\+stream\+\_\+mode@{mouse\+\_\+set\+\_\+stream\+\_\+mode}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{mouse\+\_\+set\+\_\+stream\+\_\+mode()}{mouse_set_stream_mode()}}]{\setlength{\rightskip}{0pt plus 5cm}int mouse\+\_\+set\+\_\+stream\+\_\+mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga16a521d1919cbd8f434d8b5d535a639b}{}\label{group__Mouse_ga16a521d1919cbd8f434d8b5d535a639b}
+
+
+Puts mouse working in stream mode. 
+
+\begin{DoxyReturn}{Returns}
+Returns A\+CK, N\+A\+CK or E\+R\+R\+OR 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{group__Mouse_ga16a521d1919cbd8f434d8b5d535a639b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Mouse@{Mouse}!mouse\+\_\+subscribe\+\_\+int@{mouse\+\_\+subscribe\+\_\+int}}
+\index{mouse\+\_\+subscribe\+\_\+int@{mouse\+\_\+subscribe\+\_\+int}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{mouse\+\_\+subscribe\+\_\+int(void)}{mouse_subscribe_int(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int mouse\+\_\+subscribe\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga51e6ee02a5c0a7e618abde7250cd0841}{}\label{group__Mouse_ga51e6ee02a5c0a7e618abde7250cd0841}
+
+
+Subscribes and enables K\+BC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns bit order in interrupt mask; negative value on failure 
+\end{DoxyReturn}
+\index{Mouse@{Mouse}!mouse\+\_\+unsubscribe\+\_\+int@{mouse\+\_\+unsubscribe\+\_\+int}}
+\index{mouse\+\_\+unsubscribe\+\_\+int@{mouse\+\_\+unsubscribe\+\_\+int}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{mouse\+\_\+unsubscribe\+\_\+int()}{mouse_unsubscribe_int()}}]{\setlength{\rightskip}{0pt plus 5cm}int mouse\+\_\+unsubscribe\+\_\+int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga685ad2706aca36d9869a30a19b9f446a}{}\label{group__Mouse_ga685ad2706aca36d9869a30a19b9f446a}
+
+
+Unsubscribes K\+BC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\index{Mouse@{Mouse}!new\+Mouse@{new\+Mouse}}
+\index{new\+Mouse@{new\+Mouse}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{new\+Mouse()}{newMouse()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mouse}$\ast$ new\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_gabd64fd476265e0fb0463cc3d82823701}{}\label{group__Mouse_gabd64fd476265e0fb0463cc3d82823701}
+
+
+new mouse instantiation 
+
+\begin{DoxyReturn}{Returns}
+mouse object 
+\end{DoxyReturn}
+\index{Mouse@{Mouse}!packet\+\_\+handler@{packet\+\_\+handler}}
+\index{packet\+\_\+handler@{packet\+\_\+handler}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{packet\+\_\+handler()}{packet_handler()}}]{\setlength{\rightskip}{0pt plus 5cm}void packet\+\_\+handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga44baaa1c128be31e1baba247c3b4b6db}{}\label{group__Mouse_ga44baaa1c128be31e1baba247c3b4b6db}
+\index{Mouse@{Mouse}!update\+Mouse@{update\+Mouse}}
+\index{update\+Mouse@{update\+Mouse}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{update\+Mouse()}{updateMouse()}}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__Mouse_ga6498182307b6c3f4a9c9c03a9d5116dc}{}\label{group__Mouse_ga6498182307b6c3f4a9c9c03a9d5116dc}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{group__Mouse_ga6498182307b6c3f4a9c9c03a9d5116dc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{Mouse@{Mouse}!complete\+\_\+packet@{complete\+\_\+packet}}
+\index{complete\+\_\+packet@{complete\+\_\+packet}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{complete\+\_\+packet}{complete_packet}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::complete\+\_\+packet}\hypertarget{group__Mouse_ga64798c8dfb1b60b4ce76bc9859719077}{}\label{group__Mouse_ga64798c8dfb1b60b4ce76bc9859719077}
+1 if packet is ready to be read, 0 otherwise \index{Mouse@{Mouse}!draw@{draw}}
+\index{draw@{draw}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{draw}{draw}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::draw}\hypertarget{group__Mouse_gad3b4a3a6fd6d53630bdf7aa81d74f744}{}\label{group__Mouse_gad3b4a3a6fd6d53630bdf7aa81d74f744}
+1 if mouse must be displayed on the screen, 0 otherwise \index{Mouse@{Mouse}!left\+Button\+Down@{left\+Button\+Down}}
+\index{left\+Button\+Down@{left\+Button\+Down}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{left\+Button\+Down}{leftButtonDown}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::left\+Button\+Down}\hypertarget{group__Mouse_ga401d046e1cad0fad3908120ab85b9396}{}\label{group__Mouse_ga401d046e1cad0fad3908120ab85b9396}
+1 if mouse\textquotesingle{}s left button is being pressed, 0 otherwise \index{Mouse@{Mouse}!left\+Button\+Released@{left\+Button\+Released}}
+\index{left\+Button\+Released@{left\+Button\+Released}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{left\+Button\+Released}{leftButtonReleased}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::left\+Button\+Released}\hypertarget{group__Mouse_ga9a74cd5fb66c4936d44a72962df7830c}{}\label{group__Mouse_ga9a74cd5fb66c4936d44a72962df7830c}
+1 if mouse\textquotesingle{}s left button has just been released, 0 otherwise \index{Mouse@{Mouse}!packet@{packet}}
+\index{packet@{packet}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{packet}{packet}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Mouse\+::packet\mbox{[}3\mbox{]}}\hypertarget{group__Mouse_ga8bfb0c35eb14423f5086a355d52dc733}{}\label{group__Mouse_ga8bfb0c35eb14423f5086a355d52dc733}
+array containing the 3 mouse packets \index{Mouse@{Mouse}!packet\+\_\+idx@{packet\+\_\+idx}}
+\index{packet\+\_\+idx@{packet\+\_\+idx}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{packet\+\_\+idx}{packet_idx}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::packet\+\_\+idx}\hypertarget{group__Mouse_ga1fc496df2223cb17437b296acbe02e50}{}\label{group__Mouse_ga1fc496df2223cb17437b296acbe02e50}
+index of the packet being currently read \index{Mouse@{Mouse}!x@{x}}
+\index{x@{x}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::x}\hypertarget{group__Mouse_ga136eea114b70f46392b89cc3779d4291}{}\label{group__Mouse_ga136eea114b70f46392b89cc3779d4291}
+mouse x coordinate \index{Mouse@{Mouse}!y@{y}}
+\index{y@{y}!Mouse@{Mouse}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::y}\hypertarget{group__Mouse_ga4a29b1c18faaa2fbe39ff985ba9d6737}{}\label{group__Mouse_ga4a29b1c18faaa2fbe39ff985ba9d6737}
+mouse y coordinate 

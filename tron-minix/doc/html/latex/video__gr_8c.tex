@@ -1,0 +1,86 @@
+\hypertarget{video__gr_8c}{}\section{video\+\_\+gr.\+c File Reference}
+\label{video__gr_8c}\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\\*
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\\*
+{\ttfamily \#include $<$machine/int86.\+h$>$}\\*
+{\ttfamily \#include $<$sys/mman.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}video\+\_\+gr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vbe.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}video.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lmlib.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Include dependency graph for video\+\_\+gr.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__video__gr_gacef21667c79365d57a084bed994c2189}{vg\+\_\+init} (unsigned short mode)
+\begin{DoxyCompactList}\small\item\em Initializes the video module in graphics mode. \end{DoxyCompactList}\item 
+void \hyperlink{group__video__gr_gaa1defaab9e74b37f6c3e7ec3e83a95a3}{draw\+\_\+pixel} (int x, int y, int color)
+\item 
+void \hyperlink{group__video__gr_gab27465d29f462aeaf3e710695fc20594}{vg\+\_\+png} (unsigned char $\ast$image, int width, int height, int start\+\_\+x, int start\+\_\+y)
+\item 
+void \hyperlink{group__video__gr_gae73efbc5eb5fa85cab0358d0e4de8809}{vg\+\_\+clear} ()
+\item 
+void \hyperlink{group__video__gr_ga6a48d2eaa7f116fca3dde151edee4f98}{vg\+\_\+copy} ()
+\item 
+void \hyperlink{group__video__gr_ga71250a7e4fc5b89a38e76c7d68f3a5fc}{vg\+\_\+free} ()
+\item 
+int \hyperlink{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}{vg\+\_\+exit} ()
+\begin{DoxyCompactList}\small\item\em Returns to default Minix 3 text mode (0x03\+: 25 x 80, 16 colors) \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga511311dbbd19f3b1f0c99111eee21b9a}{vg\+\_\+draw\+\_\+pixel} (unsigned short x, unsigned short y, unsigned long color)
+\begin{DoxyCompactList}\small\item\em draws one pixel on the screen \end{DoxyCompactList}\item 
+void \hyperlink{group__video__gr_ga58144867b7ba0851547e9a599b05107b}{vg\+\_\+draw\+\_\+bike} (unsigned short x, unsigned short y, unsigned long color)
+\begin{DoxyCompactList}\small\item\em draws the bike \end{DoxyCompactList}\item 
+unsigned long \hyperlink{group__video__gr_ga21e5df0f0f8fe4b0fa3841550da32c62}{vg\+\_\+get\+Color} (unsigned short x, unsigned short y)
+\begin{DoxyCompactList}\small\item\em gets a pixel color \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__video__gr_gaedd0b1a041eee82028cf2c5d581ee0a6}{get\+Secondary\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em return the secondary buffer address \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga1eee563c2d26857ee2e35d7e8656e841}{get\+Ver\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em gets vertical resolution \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga85f07897fcef302cfd16a33cb690a70a}{get\+Hor\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em gets horizontal resolution \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static phys\+\_\+bytes \hyperlink{video__gr_8c_ab6d2cc094c0dbf82deeaaefcb06c4b3a}{video\+\_\+phys}
+\item 
+static char $\ast$ \hyperlink{video__gr_8c_a93a24e067b9083bed6fb5c0336fd7a01}{video\+\_\+mem}
+\item 
+static char $\ast$ \hyperlink{video__gr_8c_a767d9dbba9c236b453eaaaf76976a6d0}{double\+\_\+buffer}
+\item 
+static uint16\+\_\+t \hyperlink{video__gr_8c_ae1a3e7f751ccf2c6aab87b740d58065f}{h\+\_\+res}
+\item 
+static uint16\+\_\+t \hyperlink{video__gr_8c_a9c67113f1cd2b08e5069bed5bcb04263}{v\+\_\+res}
+\item 
+static uint8\+\_\+t \hyperlink{video__gr_8c_a41f0887b7d19402e0123edd9c2cbec88}{bits\+\_\+per\+\_\+pixel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!bits\+\_\+per\+\_\+pixel@{bits\+\_\+per\+\_\+pixel}}
+\index{bits\+\_\+per\+\_\+pixel@{bits\+\_\+per\+\_\+pixel}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection[{\texorpdfstring{bits\+\_\+per\+\_\+pixel}{bits_per_pixel}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t bits\+\_\+per\+\_\+pixel\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{video__gr_8c_a41f0887b7d19402e0123edd9c2cbec88}{}\label{video__gr_8c_a41f0887b7d19402e0123edd9c2cbec88}
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!double\+\_\+buffer@{double\+\_\+buffer}}
+\index{double\+\_\+buffer@{double\+\_\+buffer}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection[{\texorpdfstring{double\+\_\+buffer}{double_buffer}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ double\+\_\+buffer\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{video__gr_8c_a767d9dbba9c236b453eaaaf76976a6d0}{}\label{video__gr_8c_a767d9dbba9c236b453eaaaf76976a6d0}
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!h\+\_\+res@{h\+\_\+res}}
+\index{h\+\_\+res@{h\+\_\+res}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection[{\texorpdfstring{h\+\_\+res}{h_res}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t h\+\_\+res\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{video__gr_8c_ae1a3e7f751ccf2c6aab87b740d58065f}{}\label{video__gr_8c_ae1a3e7f751ccf2c6aab87b740d58065f}
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!v\+\_\+res@{v\+\_\+res}}
+\index{v\+\_\+res@{v\+\_\+res}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection[{\texorpdfstring{v\+\_\+res}{v_res}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t v\+\_\+res\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{video__gr_8c_a9c67113f1cd2b08e5069bed5bcb04263}{}\label{video__gr_8c_a9c67113f1cd2b08e5069bed5bcb04263}
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!video\+\_\+mem@{video\+\_\+mem}}
+\index{video\+\_\+mem@{video\+\_\+mem}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection[{\texorpdfstring{video\+\_\+mem}{video_mem}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ video\+\_\+mem\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{video__gr_8c_a93a24e067b9083bed6fb5c0336fd7a01}{}\label{video__gr_8c_a93a24e067b9083bed6fb5c0336fd7a01}
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!video\+\_\+phys@{video\+\_\+phys}}
+\index{video\+\_\+phys@{video\+\_\+phys}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection[{\texorpdfstring{video\+\_\+phys}{video_phys}}]{\setlength{\rightskip}{0pt plus 5cm}phys\+\_\+bytes video\+\_\+phys\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{video__gr_8c_ab6d2cc094c0dbf82deeaaefcb06c4b3a}{}\label{video__gr_8c_ab6d2cc094c0dbf82deeaaefcb06c4b3a}

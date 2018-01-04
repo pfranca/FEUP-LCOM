@@ -1,0 +1,26 @@
+\hypertarget{structBike}{}\section{Bike Struct Reference}
+\label{structBike}\index{Bike@{Bike}}
+
+
+{\ttfamily \#include $<$bike.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__Bike_ga01cdf583ace46bc4e576c42b54ee628a}{initial\+\_\+x\+\_\+pos}
+\item 
+int \hyperlink{group__Bike_ga74f0f95635444a7570225a75f3a22056}{initial\+\_\+y\+\_\+pos}
+\item 
+int \hyperlink{group__Bike_ga9a5251a8d520f2ce0fc0e34dd7325a23}{direction}
+\item 
+int \hyperlink{group__Bike_ga3187c35b871d499fb88aca98de35282a}{head\+\_\+x\+\_\+pos}
+\item 
+int \hyperlink{group__Bike_ga48e90acd4f7eceb4ea0921f9a8b89f98}{head\+\_\+y\+\_\+pos}
+\item 
+unsigned long \hyperlink{group__Bike_ga7ba066e0787d8b239b8cb16775db0eac}{color}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bike_8h}{bike.\+h}\end{DoxyCompactItemize}

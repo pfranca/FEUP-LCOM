@@ -1,0 +1,33 @@
+#ifndef __BIKE_H
+#define __BIKE_H
+
+typedef struct Bike{
+	int initial_x_pos;
+	int initial_y_pos;
+	int direction; /* 1=up,2=right,3=down,4=left*/
+	int head_x_pos;
+	int head_y_pos;
+	unsigned long color;
+} Bike;
+
+int getInitialX(struct Bike bike);
+
+int getInitialY(struct Bike bike);
+
+int getDirection(struct Bike bike);
+
+int getHeadX(struct Bike bike);
+
+int getHeadY(struct Bike bike);
+
+unsigned long getcolor(struct Bike bike);
+
+/*void setHeadX(Bike bike, int increment);
+
+void setHeadY(Bike bike, int increment);*/
+
+void setDirection(Bike *bike, int dir);
+
+void moveHead(Bike *bike, int speed);
+
+#endif /* __BIKE_H */

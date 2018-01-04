@@ -1,0 +1,28 @@
+#include <minix/syslib.h>
+#include <minix/drivers.h>
+#include <minix/com.h>
+#include "keyboard.h"
+#include "i8042.h"
+
+int kbc_hook = 1;
+
+int kbc_subscribe_int(void){
+
+	//Save original hook ID for the irq_set
+	int originalHook=kbc_hook;
+
+	//Subscribe kbc interrupts
+	if(sys_irqsetpolicy(KBC_IRQ, IRQ_REENABLE|IRQ_EXCLUSIVE  &hookID) != OK || sys_irqenable(&hookID) != OK)
+		return -1;
+
+	return originalHook;
+}
+
+int kbc_unsubscribe_int(){
+
+	//Unsubscribe kbc interrupts
+	if(sys_irqdisable(&hookID) != OK || sys_irqrmpolicy(&hookID) != OK)
+		return 1;
+
+	return 0;
+}

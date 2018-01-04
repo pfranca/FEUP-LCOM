@@ -1,0 +1,35 @@
+#include <minix/drivers.h>
+#include <limits.h>
+#include <string.h>
+#include <errno.h>
+#include <stdio.h>
+#include "pixmap.h"
+//#include "i8042.h"
+//#include "mouse.h"
+#include "video_gr.h"
+#include "tron.h"
+
+#include "menu.h"
+#include "mainMenu.h"
+
+#include <stdint.h>
+
+
+int main(int argc, char **argv)
+{
+	/* DO NOT FORGET TO initialize service */
+	sef_startup();
+
+	int aux = 0;
+
+
+
+		if(menuLoop() == 0)
+			playTron(5,30);
+
+
+
+	return 0;
+}
+
+

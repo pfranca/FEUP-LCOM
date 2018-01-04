@@ -1,0 +1,88 @@
+\hypertarget{tron_8h}{}\section{tron.\+h File Reference}
+\label{tron_8h}\index{tron.\+h@{tron.\+h}}
+{\ttfamily \#include \char`\"{}bike.\+h\char`\"{}}\\*
+Include dependency graph for tron.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=123pt]{tron_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{tron_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{tron_8h_a03e7dcdcb72c488e797b70a6e205ffc4}{check\+Screen\+Border} (\hyperlink{structBike}{Bike} bike)
+\item 
+int \hyperlink{tron_8h_ae84c69a9097130cb9f97b2846961aab2}{check\+Colision} (\hyperlink{structBike}{Bike} bike)
+\item 
+int \hyperlink{tron_8h_aee51a9a5905e3abd702655d499cc900a}{play\+Tron} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{tron.\+h@{tron.\+h}!check\+Colision@{check\+Colision}}
+\index{check\+Colision@{check\+Colision}!tron.\+h@{tron.\+h}}
+\subsubsection[{\texorpdfstring{check\+Colision(\+Bike bike)}{checkColision(Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+Colision (
+\begin{DoxyParamCaption}
+\item[{{\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{tron_8h_ae84c69a9097130cb9f97b2846961aab2}{}\label{tron_8h_ae84c69a9097130cb9f97b2846961aab2}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{tron_8h_ae84c69a9097130cb9f97b2846961aab2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{tron.\+h@{tron.\+h}!check\+Screen\+Border@{check\+Screen\+Border}}
+\index{check\+Screen\+Border@{check\+Screen\+Border}!tron.\+h@{tron.\+h}}
+\subsubsection[{\texorpdfstring{check\+Screen\+Border(\+Bike bike)}{checkScreenBorder(Bike bike)}}]{\setlength{\rightskip}{0pt plus 5cm}int check\+Screen\+Border (
+\begin{DoxyParamCaption}
+\item[{{\bf Bike}}]{bike}
+\end{DoxyParamCaption}
+)}\hypertarget{tron_8h_a03e7dcdcb72c488e797b70a6e205ffc4}{}\label{tron_8h_a03e7dcdcb72c488e797b70a6e205ffc4}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{tron_8h_a03e7dcdcb72c488e797b70a6e205ffc4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{tron.\+h@{tron.\+h}!play\+Tron@{play\+Tron}}
+\index{play\+Tron@{play\+Tron}!tron.\+h@{tron.\+h}}
+\subsubsection[{\texorpdfstring{play\+Tron()}{playTron()}}]{\setlength{\rightskip}{0pt plus 5cm}int play\+Tron (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{tron_8h_aee51a9a5905e3abd702655d499cc900a}{}\label{tron_8h_aee51a9a5905e3abd702655d499cc900a}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tron_8h_aee51a9a5905e3abd702655d499cc900a_cgraph}
+\end{center}
+\end{figure}
+
+

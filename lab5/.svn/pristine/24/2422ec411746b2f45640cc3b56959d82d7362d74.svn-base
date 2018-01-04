@@ -1,0 +1,108 @@
+#include <minix/drivers.h>
+#include <minix/syslib.h>
+#include <minix/driver.h>
+#include <minix/com.h>
+#include <minix/sysutil.h>
+#include <limits.h>
+#include <string.h>
+#include <errno.h>
+#include <stdio.h>
+#include "video_gr.h"
+#include "keyboard.h"
+#include "i8042.h"
+
+
+
+int video_test_init(unsigned short mode, unsigned short delay) {
+
+
+	if(vg_init(mode) == NULL){
+		//printf
+		return 1;
+	}
+
+	sleep(delay);
+
+
+	//TODO:CHECKAR exit valeu
+	vg_exit();
+
+
+		return 0;
+	
+	
+}
+
+
+int video_test_square(unsigned short x, unsigned short y, unsigned short size, unsigned long color) {
+	
+	//TODO:validar inputs
+
+	int kbd_irq=kbc_subscribe_int();
+	int ipc_status;
+	message msg;
+	int r;
+	int row, col;
+	unsigned long scancode;
+
+	if(kbd_irq>=0){
+		kbd_irq=BIT(kbd_irq);
+	} else {
+		printf("Error in video_test_square::kbc_subscribe_int()\n");
+		return 1;
+	}
+
+	if(vg_init(0x105) == NULL){
+		//printf
+		return 1;
+	}
+
+	for(row = (384+y)-(size/2); row < (384+y)+(size/2); row++){
+		for(col= (512+x)-(size/2); col < (512+x)+(size/2); col++){
+			vg_draw_pixel(col,row,color);
+		}
+	}
+
+	while(scancode != BREAKCODE_ESC) {
+		/* Get a request message. */
+		if ( (r = driver_receive(ANY, &msg, &ipc_status)) != 0 ) {
+			printf("driver_receive failed with: %d", r);
+			continue;
+		}
+		if (is_ipc_notify(ipc_status)) { /* received notification */
+			switch (_ENDPOINT_P(msg.m_source)) {
+			case HARDWARE: /* hardware interrupt notification */
+				if (msg.NOTIFY_ARG & kbd_irq) { /* subscribed interrupt */
+
+						scancode=kbc_read();
+
+				}
+
+				break;
+			default:
+				break; /* no other notifications expected: do nothing */
+			}
+		} else { /* received a standard message, not a notification */
+						/* no standard messages expected: do nothing */
+		}
+	}
+
+	vg_exit();
+
+	//Unsubscribe kbd interrupts
+	if(kbc_unsubscribe_int()){
+		printf("Unsubscribe failed\n In kbd_test_scan::kbc_unsubscribe_int()\n");
+		return 1;
+	}
+
+	return 0;
+	
+}
+
+int video_test_line(unsigned short xi, unsigned short yi, 
+		           unsigned short xf, unsigned short yf, unsigned long color) {
+	
+	return 0;
+	
+}
+	

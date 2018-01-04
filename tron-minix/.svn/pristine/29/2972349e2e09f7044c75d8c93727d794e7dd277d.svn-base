@@ -1,0 +1,190 @@
+#include <minix/drivers.h>
+#include <minix/syslib.h>
+#include <minix/driver.h>
+#include <minix/com.h>
+#include <minix/sysutil.h>
+#include <limits.h>
+#include <string.h>
+#include <errno.h>
+#include <stdio.h>
+#include <math.h>
+#include "video_gr.h"
+#include "keyboard.h"
+#include "i8042.h"
+#include "timer.h"
+#include "i8254.h"
+#include "read_xpm.h"
+#include "bike.h"
+
+/*Bike player1{
+	initial_x_pos=10;
+	initial_y_pos=VRES/2;
+	direction;
+	head_x_pos=initial_x_pos;
+	head_y_pos=initial_y_pos;
+	color=0x3D;
+};*/
+
+Bike player1={10,V_RES/2,2,10,V_RES/2,0x3D};
+Bike player2={H_RES-10,V_RES/2,4,H_RES-10,V_RES/2,0x37};
+
+int checkScreenBorder(Bike bike){
+
+	if( (getHeadX(bike) < 0) || (getHeadX(bike) > H_RES) ){
+		return 1;
+	}
+
+	if( (getHeadY(bike) < 0) || (getHeadY(bike) > V_RES) ){
+		return 1;
+	}
+
+	return 0;
+}
+
+/*É SÓ PERCEBER COMO SEI A COR DE UM PIXEL SABENDO A PASOIÇÃO DELE E FICA UM LUXO*/
+int checkColision(Bike bike){
+	int direction = getDirection(bike);
+
+	switch(direction){
+
+	case (1):
+		break;
+	case (2):
+		break;
+	case (3):
+		break;
+	case (4):
+		break;
+	}
+}
+
+int move_motorcycle(short s, unsigned short f) {
+
+
+	int timer_irq=timer_subscribe_int();
+	int kbd_irq=kbc_subscribe_int();
+	int ipc_status;
+	message msg;
+	int r;
+	unsigned long scancode;
+	int over = 0;
+
+
+	if(kbd_irq>=0){
+		kbd_irq=BIT(kbd_irq);
+	} else {
+		printf("Error in video_test_square::kbc_subscribe_int()\n");
+		return 1;
+	}
+
+
+	if(timer_irq>=0){
+		timer_irq=BIT(timer_irq);
+	} else {
+		printf("Error in timer_test_int::timer_subscribe_int()\n");
+		return 1;
+	}
+	//-----------------------------------------------------------
+
+
+	if(vg_init(0x105) == NULL){
+		printf("Cannot initialize in graphics mode 0x105");
+		return 1;
+	}
+
+	if(f < 20){
+		printf("Frequency cannot be less than 20\n");
+		return 1;
+	}
+
+
+	//--------------------------------------------
+	// EXIT ON ESC
+	//------------------------------------------------------------
+
+	while( over == 0) {
+		/* Get a request message. */
+		if ( (r = driver_receive(ANY, &msg, &ipc_status)) != 0 ) {
+			printf("driver_receive failed with: %d", r);
+			continue;
+		}
+		if (is_ipc_notify(ipc_status)) { /* received notification */
+			switch (_ENDPOINT_P(msg.m_source)) {
+			case HARDWARE: /* hardware interrupt notification */
+
+
+				if (msg.NOTIFY_ARG & timer_irq) { /* subscribed interrupt - timer */
+
+
+					if(s > 0){
+
+						moveHead(&player1,s);
+						moveHead(&player2,s);
+
+					}
+
+					if( checkScreenBorder(player1) || checkScreenBorder(player2) ){
+						over = 1;
+					}
+
+					vg_draw_bike(getHeadX(player1), getHeadY(player1), 0x3D);
+					vg_draw_bike(getHeadX(player2), getHeadY(player2), 0x37);
+
+				}
+
+				if (msg.NOTIFY_ARG & kbd_irq) { /* subscribed interrupt - keyboard */
+					scancode=kbc_read();
+					if((scancode == MAKECODE_W) && (getDirection(player1) != 3)){
+						setDirection(&player1,1);
+					}
+					if((scancode == MAKECODE_A) && (getDirection(player1) != 2)){
+						setDirection(&player1,4);
+					}
+					if((scancode == MAKECODE_S) && (getDirection(player1) != 1)){
+						setDirection(&player1,3);
+					}
+					if((scancode == MAKECODE_D) && (getDirection(player1) != 4)){
+						setDirection(&player1,2);
+					}
+					if((scancode == MAKECODE_UP_NUMPAD8) && (getDirection(player2) != 3)){
+						setDirection(&player2,1);
+					}
+					if((scancode == MAKECODE_LEFT_NUMPAD4) && (getDirection(player2) != 2)){
+						setDirection(&player2,4);
+					}
+					if((scancode == MAKECODE_DOWN_NUMPAD2) && (getDirection(player2) != 1)){
+						setDirection(&player2,3);
+					}
+					if((scancode == MAKECODE_RIGHT_NUMPAD6) && (getDirection(player2) != 4)){
+						setDirection(&player2,2);
+					}
+				}
+
+				break;
+			default:
+				break; /* no other notifications expected: do nothing */
+			}
+		} else { /* received a standard message, not a notification */
+						/* no standard messages expected: do nothing */
+		}
+	}
+
+
+
+	vg_exit();
+
+	//Unsubscribe timer 0 interrupts
+	if( timer_unsubscribe_int()){
+		printf("Unsubscribe failed\n In kbd_test_timed_scan::timer_unsubscribe_int()\n");
+		return 1;
+	}
+
+	//Unsubscribe kbd interrupts
+	if(kbc_unsubscribe_int()){
+		printf("Unsubscribe failed\n In kbd_test_scan::kbc_unsubscribe_int()\n");
+		return 1;
+	}
+
+	return 0;
+
+}

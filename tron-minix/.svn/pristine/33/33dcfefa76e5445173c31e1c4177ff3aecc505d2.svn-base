@@ -1,0 +1,6 @@
+<map id="getMouse" name="getMouse">
+<area shape="rect" id="node2" href="$group__Mouse.html#ga108813d01ba189cc8bb0dca728c932a8" title="Enable mouse data report in stream mode. " alt="" coords="132,31,311,57"/>
+<area shape="rect" id="node5" href="$group__Mouse.html#gabd64fd476265e0fb0463cc3d82823701" title="new mouse instantiation " alt="" coords="179,81,264,108"/>
+<area shape="rect" id="node3" href="$group__Keyboard.html#gaed40b556eb233ac6f329eb8396192b6f" title="write command to the kbc First reads status comand byte " alt="" coords="359,5,437,32"/>
+<area shape="rect" id="node4" href="$group__Keyboard.html#ga0028905df4260d371b30e92f547c712a" title="Read OUTPUT BUFFER (0x60) " alt="" coords="361,56,435,83"/>
+</map>

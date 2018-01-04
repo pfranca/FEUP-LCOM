@@ -1,0 +1,26 @@
+#include <minix/drivers.h>
+#include <limits.h>
+#include <string.h>
+#include <errno.h>
+#include <stdio.h>
+#include "pixmap.h"
+//#include "i8042.h"
+//#include "mouse.h"
+#include "video_gr.h"
+#include "tron.h"
+
+
+
+int main(int argc, char **argv)
+{
+	/* DO NOT FORGET TO initialize service */
+	sef_startup();
+
+	vg_init(0x105);
+	move_motorcycle(5,30);
+
+
+	return 0;
+}
+
+

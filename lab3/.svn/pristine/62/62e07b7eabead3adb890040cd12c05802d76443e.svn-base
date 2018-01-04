@@ -1,0 +1,13 @@
+#include "i8042.h"
+
+
+.text
+
+.global _asm_handler
+_asm_handler:
+xor %eax,%eax
+inb $OUT_BUF, %al
+
+
+ret
+.end _asm_handler
