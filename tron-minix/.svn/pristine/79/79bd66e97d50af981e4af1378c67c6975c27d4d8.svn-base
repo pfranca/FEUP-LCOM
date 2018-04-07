@@ -1,6 +1,0 @@
-#ifndef __MAINMENU_H
-#define __MAINMENU_H
-
-int menuLoop();
-
-#endif
