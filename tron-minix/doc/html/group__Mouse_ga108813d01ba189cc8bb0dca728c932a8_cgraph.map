@@ -1,4 +1,0 @@
-<map id="mouse_enable_data_report" name="mouse_enable_data_report">
-<area shape="rect" id="node2" href="$group__Keyboard.html#gaed40b556eb233ac6f329eb8396192b6f" title="write command to the kbc First reads status comand byte " alt="" coords="232,5,311,32"/>
-<area shape="rect" id="node3" href="$group__Keyboard.html#ga0028905df4260d371b30e92f547c712a" title="Read OUTPUT BUFFER (0x60) " alt="" coords="234,56,309,83"/>
-</map>

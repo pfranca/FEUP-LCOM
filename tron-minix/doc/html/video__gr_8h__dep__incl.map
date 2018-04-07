@@ -1,7 +1,0 @@
-<map id="video_gr.h" name="video_gr.h">
-<area shape="rect" id="node2" href="$mainMenu_8c.html" title="mainMenu.c" alt="" coords="5,80,99,107"/>
-<area shape="rect" id="node3" href="$menu_8c.html" title="menu.c" alt="" coords="123,80,189,107"/>
-<area shape="rect" id="node4" href="$mouse_8c.html" title="mouse.c" alt="" coords="213,80,285,107"/>
-<area shape="rect" id="node5" href="$tron_8c.html" title="tron.c" alt="" coords="310,80,365,107"/>
-<area shape="rect" id="node6" href="$video__gr_8c.html" title="video_gr.c" alt="" coords="389,80,472,107"/>
-</map>
